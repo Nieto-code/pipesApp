@@ -1,0 +1,43 @@
+<p-panel header="Pipes básicos" class="p-1">
+  <p>
+    Pipes incluídos en Angular - Usualmente en el Common Module
+  </p>
+</p-panel>
+
+
+<div class="grid">
+
+  <div class="col-12 md:col-4">
+    <p-card header="uppercase">
+      {{ nameLower | uppercase }}
+    </p-card>
+  </div>
+
+  <div class="col-12 md:col-4">
+    <p-card header="lowercase">
+      {{ nameUpper | lowercase }}
+    </p-card>
+  </div>
+
+  <div class="col-12 md:col-6">
+    <p-card header="titlecase">
+      {{ fullName | titlecase }}
+      <ol>
+        <li>Fecha: -> {{customDate}}</li>
+        <li>Fecha: Pipe date -> {{customDate | date}}</li>
+        <li>Fecha: Pipe date:'short'-> {{customDate | date:'short'}}</li>
+        <li>Fecha: Pipe date:'short'-> {{customDate | date:'long'}}</li>
+        <li>Fecha: Pipe date:'MMMMM' -> {{customDate | date:'MMMM'}}</li>
+        <li>Fecha: Pipe date:'MMMMM dd yy' -> {{customDate | date:'MMMM dd yy'}}</li>
+      </ol>
+
+      <hr>
+
+      <ol>
+        <li>Timezone GMT 6:  {{customDate | date:'long': 'GMT-6'}} </li>
+        <li>Timezone GMT 4:  {{customDate | date:'long': 'GMT-6'}} </li>
+        <li>Timezone GMT 6 (Spanish):  {{customDate | date:'long':'': 'es-EA'}} </li>
+        <li>Timezone GMT 6 (French):  {{customDate | date:'long':'': 'fr-CA'}} </li>
+      </ol>
+  </p-card>
+  </div>
