@@ -10,8 +10,6 @@ export class UncommonPageComponent {
 
 
 
-
-
 // i18n Select
 public name: string = 'Fernando';
 public gender: 'male' | 'female' = 'male';
@@ -34,6 +32,7 @@ public clientsMap = {
   'other': ' tenemos # clientes esperando',
 
 }
+
 deleteClient() {
     this.clients.pop();
   }
@@ -50,6 +49,8 @@ public person = {
 public myObservableTimer: Observable<number> = interval(2000).pipe(
     tap( value => console.log('tap:', value) ),
 );
+
+
 
 public promiseValue:Promise<string> = new Promise((resolve, reject) => {
   setTimeout( () => {
